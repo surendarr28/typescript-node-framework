@@ -1,0 +1,40 @@
+{
+  "name": "nodeframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && nodemon --debug build/index.js --env development",
+    "build": "tsc",
+    "migrate": "sequelize db:migrate",
+    "migrate:create": "sequelize migration:create --name",
+    "migrate:undo": "sequelize db:migrate:undo",
+    "migrate:undo:all": "sequelize db:migrate:undo:all",
+    "watch": "tsc --watch",
+    "debug": "node --nolazy --debug-brk=5858"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.16.0",
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.4",
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "multer": "^1.3.0",
+    "mysql2": "^1.2.0",
+    "moment": "^2.18.1",
+    "ms": "^2.0.0",
+    "reflect-metadata": "^0.1.10",
+    "sequelize": "^4.0.0-1",
+    "sequelize-cli": "^2.7.0",
+    "sequelize-typescript": "^0.3.1",
+    "socket.io": "^2.0.1",
+    "yargs": "^8.0.1"
+  }
+}
